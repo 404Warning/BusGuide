@@ -110,7 +110,10 @@ public class RoutePlanActivity extends AppCompatActivity {
                         msg.append(transitStep.getInstructions());
                         tempbustline.append(transitStep.getInstructions());
                     }
-                    if(temp<min) bestline=tempbustline.toString();
+                    if(temp<min) {
+                        bestline=tempbustline.toString();
+                        min=temp;
+                    }
                     routeList.add(msg.toString());
                     i+=1;
                     msg.setLength(0);
